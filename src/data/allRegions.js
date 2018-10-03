@@ -1,4 +1,4 @@
-import region01 from './region01.js';
+import region01 from './region01-monsters.js';
 
 export default {
   campaign: {

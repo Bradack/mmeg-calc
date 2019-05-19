@@ -1,5 +1,5 @@
 export default {
-  
+
   achievement:
     {
       name: '',
@@ -16,7 +16,7 @@ export default {
             eKey: ,
             lKey: ,
             eFrags: ,
-            eStone,
+            eStone: ,
             lFrag: ,
             coins: ,
           }

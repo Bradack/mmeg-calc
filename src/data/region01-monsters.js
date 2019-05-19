@@ -1,10 +1,29 @@
 export default {
-  region: `Floating Islands`,
-  levels: [
+
+  regionName: `Floating Islands`,
+
+  regionNumber: 1,
+
+  listOrder: [
+    'Lizardman Archer',
+    'Lizardman Shaman',
+    'Lizardman Warrior',
+    'Wolf Cub',
+    'Wolf',
+    'Silverback',
+    'Arcane Bird',
+    'Arcane Eagle',
+    'Simurgh',
+    'Harpy',
+    'Fury',
+    'Dragon',
+  ],
+
+  levels: {
     /*------------------------------------------------------------------------------
     -----Normal Mode levels---------------------------------------------------------
     ------------------------------------------------------------------------------*/
-    {
+    '1-1N': {
       energy: 5,
       level: 1,
       mode: `Normal`,
@@ -12,7 +31,7 @@ export default {
       'Lizardman Shaman': 1,
       'Wolf Cub': 1,
     },
-    {
+    '1-2N': {
       energy: 5,
       level: 2,
       mode: `Normal`,
@@ -21,7 +40,7 @@ export default {
       'Lizardman Warrior': 1,
       'Wolf Cub': 1,
     },
-    {
+    '1-3N': {
       energy: 5,
       level: 3,
       mode: `Normal`,
@@ -31,7 +50,7 @@ export default {
       'Wolf Cub': 1,
       'Arcane Bird': 1,
     },
-    {
+    '1-4N': {
       energy: 5,
       level: 4,
       mode: `Normal`,
@@ -42,7 +61,7 @@ export default {
       'Arcane Bird': 1,
       'Harpy': 1,
     },
-    {
+    '1-5N': {
       energy: 5,
       level: 5,
       mode: `Normal`,
@@ -51,7 +70,7 @@ export default {
       'Wolf': 3,
       'Arcane Eagle': 1,
     },
-    {
+    '1-6N': {
       energy: 5,
       level: 6,
       mode: `Normal`,
@@ -60,7 +79,7 @@ export default {
       'Arcane Eagle': 1,
       'Harpy': 3,
     },
-    {
+    '1-7N': {
       energy: 5,
       level: 7,
       mode: `Normal`,
@@ -70,10 +89,11 @@ export default {
       'Harpy': 1,
       'Dragon': 1,
     },
+
     /*------------------------------------------------------------------------------
     -----Advanced mode levels-------------------------------------------------------
     ------------------------------------------------------------------------------*/
-    {
+    '1-1A': {
       energy: 6,
       level: 1,
       mode: `Advanced`,
@@ -83,7 +103,7 @@ export default {
       'Wolf': 2,
       'Arcane Eagle': 1,
     },
-    {
+    '1-2A': {
       energy: 6,
       level: 2,
       mode: `Advanced`,
@@ -93,7 +113,7 @@ export default {
       'Arcane Eagle': 1,
       'Harpy': 1,
     },
-    {
+    '1-3A': {
       energy: 6,
       level: 3,
       mode: `Advanced`,
@@ -104,7 +124,7 @@ export default {
       'Silverback': 1,
       'Harpy': 1,
     },
-    {
+    '1-4A': {
       energy: 6,
       level: 4,
       mode: `Advanced`,
@@ -116,7 +136,7 @@ export default {
       'Simurgh': 1,
       'Harpy': 1,
     },
-    {
+    '1-5A': {
       energy: 6,
       level: 5,
       mode: `Advanced`,
@@ -126,7 +146,7 @@ export default {
       'Silverback': 1,
       'Simurgh': 1,
     },
-    {
+    '1-6A': {
       energy: 6,
       level: 6,
       mode: `Advanced`,
@@ -137,7 +157,7 @@ export default {
       'Silverback': 1,
       'Fury': 1,
     },
-    {
+    '1-7A': {
       energy: 6,
       level: 7,
       mode: `Advanced`,
@@ -149,10 +169,11 @@ export default {
       'Fury': 1,
       'Dragon': 1,
     },
+
     /*------------------------------------------------------------------------------
     -----Nightmare mode levels------------------------------------------------------
     ------------------------------------------------------------------------------*/
-    {
+    '1-1NM': {
       energy: 7,
       level: 1,
       mode: `Nightmare`,
@@ -163,7 +184,7 @@ export default {
       'Silverback': 1,
       'Simurgh': 1,
     },
-    {
+    '1-2NM': {
       energy: 7,
       level: 2,
       mode: `Nightmare`,
@@ -174,7 +195,7 @@ export default {
       'Harpy': 1,
       'Fury': 1,
     },
-    {
+    '1-3NM': {
       energy: 7,
       level: 3,
       mode: `Nightmare`,
@@ -185,7 +206,7 @@ export default {
       'Silverback': 1,
       'Simurgh': 2,
     },
-    {
+    '1-4NM': {
       energy: 7,
       level: 4,
       mode: `Nightmare`,
@@ -194,7 +215,7 @@ export default {
       'Wolf': 2,
       'Silverback': 1,
     },
-    {
+    '1-5NM': {
       energy: 7,
       level: 5,
       mode: `Nightmare`,
@@ -203,7 +224,7 @@ export default {
       'Wolf': 1,
       'Silverback': 3,
     },
-    {
+    '1-6NM': {
       energy: 7,
       level: 6,
       mode: `Nightmare`,
@@ -215,7 +236,7 @@ export default {
       'Simurgh': 1,
       'Fury': 1,
     },
-    {
+    '1-7NM': {
       energy: 7,
       level: 7,
       mode: `Nightmare`,
@@ -226,5 +247,5 @@ export default {
       'Fury': 2,
       'Dragon': 1,
     },
-  ]
+  }
 }

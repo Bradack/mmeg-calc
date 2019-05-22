@@ -9,33 +9,36 @@ import './Calculator.css';
 class Calculator extends React.Component {
   constructor() {
     super();
+
+    let progress = {};
+    monsters.listOrder.forEach(monster => progress[monster] = 0);
+    
     this.state = {
-      goals: {}
+      progress
     };
 
-    monsters.listOrder.forEach(monster => this.state.goals[monster] = '')
 
-    this.handleGoalInput = this.handleGoalInput.bind(this)
+    this.handleProgressInput = this.handleProgressInput.bind(this)
     this.submitValues = this.submitValues.bind(this);
   }
 
-  handleGoalInput(e) {
+  handleProgressInput(e) {
     console.log('Handling input');
     console.log('e.target.value:', e.target.value);
     
     if(parseInt(e.target.value)) {
-      console.log('State of state:', this.state.goals);
+      console.log('State of state:', this.state.progress);
       // console.log('Full event:', e);
       // console.log('e.nativeEvent:', e.nativeEvent);
-      let newGoals = {...this.state.goals}
+      let newGoals = {...this.state.progress}
       console.log('newGoals:', newGoals);
       newGoals[e.nativeEvent.target.id] = parseInt(e.target.value);
-      this.setState({goals: newGoals});
+      this.setState({progress: newGoals});
       console.log('state:', this.state);
     } else if(e.target.value === '') {
-      let newGoals = {...this.state.goals}
+      let newGoals = {...this.state.progress}
       newGoals[e.nativeEvent.target.id] = 0;
-      this.setState({goals: newGoals});
+      this.setState({progress: newGoals});
     }
   }
 
@@ -45,7 +48,7 @@ class Calculator extends React.Component {
       let inputItem = 
         <div key={i}>
           {item}:
-          <input id={item} onChange={this.handleGoalInput} value={this.state.goals[item]}></input>
+          <input id={item} onChange={this.handleProgressInput} value={this.state.progress[item]}></input>
         </div>
       inputItems.push(inputItem);
     })
@@ -54,17 +57,19 @@ class Calculator extends React.Component {
   }
 
   submitValues() {
-    let goals = {...this.state.goals}
+    let progress = {...this.state.progress}
     let outGoals = []
-
-    for(let goal in goals) {
-      if(goals[goal]) {
+    console.log('progress:', progress);
+    
+    for(let item in progress) {
+      // if(progress[item]) {
         let tempGoal = {}
-        tempGoal.name = goal;
-        tempGoal.number = 1000 - goals[goal]
+        tempGoal.name = item;
+        tempGoal.number = 1000 - progress[item]
         outGoals.push(tempGoal);
-      }
+      // }
     }
+    console.log('outGoals:', outGoals);
     
     let results = calcLogic(outGoals, 'Floating Islands');
     console.log('results:', results);

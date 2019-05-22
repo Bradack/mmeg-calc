@@ -2,4 +2,13 @@
   width: 500px;
   display: flex;
   flex-wrap: wrap;
+  /* background: grey; */
+}
+
+.input-holder input {
+  width: 30px;
+  /* background: blue; */
+  border: none;
+  border-bottom: 1px black solid;
+  text-align: center;
 }
